@@ -1,0 +1,98 @@
+/* RESETS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+}
+/* GRIDS */
+header {
+    background-color: #14213d;
+    grid-area: header;
+}
+
+main {
+    background-color: #FFFFFF;
+    grid-area: main;
+}
+
+aside {
+    background-color: #444444;
+    grid-area: aside;
+}
+
+footer {
+    background-color: #ff7b00;
+    grid-area: footer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: "header header"
+                         "main aside"
+                         "footer footer";
+    grid-gap: 0.2rem;
+}
+/* GRID RESPONSIVO */
+
+@media only screen and (max-width:550px){
+    .container{
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 2.4fr 0.4fr;
+        grid-template-areas: "header"
+                             "aside"
+                             "main"
+                             "footer";
+        grid-gap:0;
+    }
+    nav {
+        padding-top: 10px;
+    }
+}
+/* FLEX BOX / ESTILIZAÇÃO BÁSICA */
+
+nav {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+span {
+    font-size: 30px;
+}
+
+ul {
+    font-size: 22px;
+    list-style-type: none;
+    display: flex;
+    gap:15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+}
+
+.aside {
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.footer {
+    text-align: center;
+    letter-spacing: 3px;
+}
